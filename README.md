@@ -4,7 +4,7 @@ A clean, reproducible demo for **Arabic Automatic Speech Recognition (ASR)** bui
 This repo contains a ready-to-run Jupyter notebook, quick evaluation guidance (WER), and minimal dependencies for fast setup.
 
 
-[wave2vec2-base](image.png)
+![wave2vec2-base](image.png)
 
 ## Why this project?
 - Showcases an end-to-end ASR workflow in Arabic: data loading, resampling to 16 kHz, quick exploration, and inference.
