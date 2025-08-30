@@ -46,11 +46,3 @@ hypothesis = pred_str  # from the model output
 print("WER:", wer(reference, hypothesis))
 ```
 
-## Notes
-- This is a **learning/demo** repository. For full fine-tuning, consider adding language-specific tokenizers and CTC training scripts.
-- The included slide image comes from your assignment PDF to illustrate context only.
-- Credits: your course handout and slides.
-
-
----
-*Prepared for GitHub publication. Feel free to rename the repo to something like `arabic-asr-wav2vec2-demo` and add screenshots/GIFs of results later.*
