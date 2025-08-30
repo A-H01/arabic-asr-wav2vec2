@@ -35,30 +35,6 @@ jupyter lab  # or: jupyter notebook
 - **Mozilla Common Voice v11.0 (Arabic)** — `mozilla-foundation/common_voice_11_0`  
   You can load it via 🤗 Datasets inside the notebook.
 
-## Minimal Inference (pseudo-snippet)
-Below is a short reference for running a quick forward pass (actual code is in the notebook).
-
-```python
-from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
-import torch, torchaudio
-
-model_id = "facebook/wav2vec2-base"
-processor = Wav2Vec2Processor.from_pretrained(model_id)
-model = Wav2Vec2ForCTC.from_pretrained(model_id)
-
-# Load mono audio at 16 kHz
-wav, sr = torchaudio.load("sample.wav")
-if sr != 16000:
-    wav = torchaudio.functional.resample(wav, sr, 16000)
-
-inputs = processor(wav.squeeze().numpy(), sampling_rate=16000, return_tensors="pt", padding=True)
-with torch.no_grad():
-    logits = model(inputs.input_values).logits
-
-pred_ids = torch.argmax(logits, dim=-1)
-pred_str = processor.batch_decode(pred_ids)[0]
-print(pred_str)
-```
 
 ## Quick Evaluation (WER)
 If you have reference transcripts, you can compute **WER** quickly:
