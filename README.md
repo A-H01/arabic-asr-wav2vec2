@@ -4,7 +4,8 @@
 A clean, reproducible demo for **Arabic Automatic Speech Recognition (ASR)** built on `facebook/wav2vec2-base` and Mozilla **Common Voice** v11.0 (Arabic).  
 This repo contains a ready-to-run Jupyter notebook, quick evaluation guidance (WER), and minimal dependencies for fast setup.
 
-![Wav2Vec 2.0](images/wav2vec2_slide.png)
+![Uploading image.png…]()
+
 
 ## Why this project?
 - Showcases an end-to-end ASR workflow in Arabic: data loading, resampling to 16 kHz, quick exploration, and inference.
