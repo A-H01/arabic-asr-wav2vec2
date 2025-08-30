@@ -1,0 +1,7 @@
+transformers>=4.42
+datasets>=2.19
+torch
+torchaudio
+jiwer
+matplotlib
+jupyterlab
